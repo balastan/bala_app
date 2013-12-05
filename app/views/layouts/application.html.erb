@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>: : Sample App : :</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<div id="dvmaincontainer">
+  <!--main div container starts here-->
+  <div id="dvtopcontainer">
+    <!-- top container starts here-->
+    <div id="dvlogocontainer">
+      <!-- logo container starts here-->
+	  <h1>Sample App</h1>
+	  <h4>HA HA!! OH OH!!</h4>
+      
+      <!-- logo container ends here-->
+    </div>
+    <div id="dvnavicontainer">
+      <!-- navogation div starts here-->
+      <!-- <div><img src="images/navi_left.jpg" alt="" /></div> -->
+<div id="tabs1" >
+        <ul>
+          <!-- CSS Tabs -->
+          <li id="current"><a href="/"><span>Home</span></a></li>
+          <li><a href="#"><span>Services</span></a></li>
+          <li><a href="#"><span>News </span></a></li>
+          <li><a href="#"><span>Contact Us</span></a></li>
+          <li><a href="#"><span>About Us</span></a></li>
+          
+        <% if user_signed_in? %>
+		  <li>Logged in as <strong><%= current_user.email %></strong>.</li>
+		  <li><%= link_to edit_user_registration_path, :class => 'navbar-link'  do %> <span>Edit profile</span><%end%></li> 
+		  <li><%= link_to destroy_user_session_path, method: :delete, :class => 'navbar-link'  do %> <span>Logout</span><%end%></li>
+		<% else %>
+		  <li><%= link_to new_user_registration_path, :class => 'navbar-link'  do %> <span>Sign up</span><%end%></li> 
+		  <li><%= link_to new_user_session_path, :class => 'navbar-link' do %> <span>Login</span><%end%></li>
+		<% end %>
+          <!-- <li><a href="/users/sign_in"><span>Sign In</span></a></li> -->
+        </ul>
+      </div>
+     <!--  <div><img src="images/navi_right.jpg" alt="" /></div> -->
+      <!-- navogation div ends here-->
+    </div>
+    <!-- top container ends here-->
+  </div>
+  <div id="dvbodycontainer">
+    <!-- body div starts here-->
+    <div id="dvbannerbgcontainer">
+      <!-- banner bg div starts here-->
+      <div class="lftcontainer">
+        <div class="dvbannerleft">
+          <!-- banner left div starts here-->
+          <img src="/images/light.jpg"  alt="" title=""/>
+          <p><b>Bright Ideas</b> One of our services is our bright ideas and details.</p>
+          <!-- banner left div ends here-->
+        </div>
+        <div class="dvbannerleft">
+          <!-- banner left div starts here-->
+          <img src="/images/home_icon.jpg"  alt="" title=""/>
+          <p><b>Project Quote</b> We provide you with a detailed price quote.</p>
+          <!-- banner left div ends here-->
+        </div>
+        <div class="dvbannerleft">
+          <!-- banner left div starts here-->
+          <img src="/images/rpt.jpg"  alt="" title=""/>
+          <p><b>Environment</b> We care about the environment and our projects.</p>
+          <!-- banner left div ends here-->
+        </div>
+      </div>
+      <div id="dvbanner">
+        <!-- banner div starts here-->
+        <img src="/images/banner.jpg"  alt="" title=""/>
+        <!-- banner div ends here-->
+      </div>
+      <!-- banner bg div ends here-->
+    </div>
+    <div id="dvleftpanel">
+      <!-- left pannel div starts here-->
+      <div id="topimage">
+        <!-- top left div starts here-->
+       Search Here 
+        <!--<img src="images/client.jpg" alt="Client Testimonials" width="274" height="34" title="Client Testimonials" /> -->
+        <!-- top left div end here-->
+      </div>
+      <div class="search" id="midcont">
+        <!-- left body div starts here-->
+        <%= render partial: "search/search" %>
+        <!-- left body div ends here-->
+      </div>
+      <div id="leftfoot"><span>Nice little Sidebar</span>
+        <p>This is where you can put some services text fillers.</p>
+        <p>The more you put the better</p>
+      </div>
+      <!-- left pannel div ends here-->
+    </div>
+    <div id="dvrightpanel">
+      <!-- right panel div starts here-->
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield%>
+      
+      </div>
+      <!-- right panel div ends here-->
+    </div>
+    <!-- body div ends here-->
+  </div>
+  <!-- <div id="dvfootercontainer"> -->
+    <!-- footer div starts here-->
+    <!-- <div id="foottop">
+      <p><span>Copyright © 2008 Your Company Name</span> <a href="#" title="Home">Home</a><a href="#" title="Services">Services</a><a href="#" title="Portfolio">Portfolio</a><a href="#" title="Blog">Blog</a><a href="http://www.studio7designs.com">Eco Web Design by Studio7designs</a></p>
+      <div class="design"> <a href="#"><img src="images/studio.jpg" alt="Studio7designs" border="0" title="Studio7designs" /></a> </div>
+    </div> -->
+    <!-- footer div ends here-->
+  <!-- </div> -->
+  <!--main div container ends here-->
+</div>
+</body>
+</html>
