@@ -1,25 +1,25 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
-
+<table>
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
-
+<tr><td>
   <p><%= f.label :email %><br />
-  <%= f.text_field :email %></p>
-
+  <%= f.text_field :email %></p></td></tr>
+<tr><td>
   <p><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-  <%= f.password_field :password %></p>
-
+  <%= f.password_field :password %></p></td></tr>
+<tr><td>
   <p><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></p>
-
+  <%= f.password_field :password_confirmation %></p></td></tr>
+<tr><td>
   <p><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-  <%= f.password_field :current_password %></p>
-
-  <p><%= f.submit "Update" %></p>
+  <%= f.password_field :current_password %></p></td></tr>
+<tr><td>
+  <p><%= f.submit "Update" %></p></td></tr>
 <% end %>
-
+</table>
 <h3>Cancel my account</h3>
 <%# raise resource_name.inspect%>
 <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => 'delete' %>.</p>
 
-<%= link_to "Back", :back %>
+<p><%= link_to "Back", :back %></p>

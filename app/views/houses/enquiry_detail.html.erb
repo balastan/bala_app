@@ -1,0 +1,41 @@
+
+<!-- <table class="table_style1">
+	<tr>
+		<th>S.no</th>
+		<th>House Number</th>
+		<th>Floor Number</th>
+		<th>House Type</th>
+	</tr>
+	<%count = 0%>
+	<% @houses.each do |house| %>
+	<%count +=1%>
+	<tr>
+		<td><%= count%></td>
+		<td><%= house.house_number%></td>
+		<td><%= house.floor_number%></td>
+		<td><%= house.house_type%></td>	
+	</tr>
+	<%end%>
+</table> -->
+<%# raise @houses[0].house_type.inspect%>
+<link href="/style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+	.black_div p {
+		width: 450px;
+		border: 1px solid;
+		padding:15px;
+		font-size: 15px;
+    	font-weight: bold;
+    	background-color: #AACF58;
+	}
+</style>
+<div sytle="position:relative;"> 
+<h1>Showing The Details For "<%= @houses.last.house_type %>"</h1>
+<div class="black_div"><p>Property Details [Available Houses : <%= @count_houses%>]</p><br/><p>[Available Houses in Floors Wise : <% @houses.each do |house| %><%= house.floor_number %><%= " "%><%end%>  ]</p></div>
+<div style="position: absolute;top: 558px">
+<%= render partial: "houses/one_bhk" unless @houses.last.house_type != "One BHK" %>
+<%= render partial: "houses/two_bhk" unless @houses.last.house_type != "Two BHK" %>
+<%= render partial: "houses/three_bhk" unless @houses.last.house_type != "Three BHK" %>
+</div>
+<div class="button" style="position: absolute;top: 786px;right: 600px;"><%= link_to "Book Now!!", new_booking_detail_path(:house_type => @houses.last.house_type) %></div>
+</div>

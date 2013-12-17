@@ -10,7 +10,32 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131202092549) do
+ActiveRecord::Schema.define(:version => 20131213053612) do
+
+  create_table "booking_details", :force => true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.string   "father_name"
+    t.integer  "age"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "pincode"
+    t.string   "mobile_number"
+    t.string   "interested_in"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "houses", :force => true do |t|
+    t.string   "house_number"
+    t.integer  "floor_number"
+    t.string   "house_type"
+    t.boolean  "is_booked"
+    t.boolean  "is_using"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false

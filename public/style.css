@@ -204,13 +204,26 @@ font-weight:bold;
 }
 #dvleftpanel #leftfoot
 {
-float:left;
+  float:left;
+width:259px;
+font-size:17px;
+margin:0px;
+padding:8px 0px 0px 15px;
+height:23px;
+background-color:#A4051B;
+color:#FFFFFF;
+text-align:center;
+font-weight:bold;
+font-family:'Helvetica', Arial, Verdana;
+voice-family:"\"}\"";
+line-height:18px;
+/*float:left;
 width:258px;
 background-image:url(../images/left_foot.jpg);
 background-repeat:no-repeat;
 background-position:top;
 margin:12px 0px 0px 0px;
-padding:11px 0px 13px 16px;
+padding:11px 0px 13px 16px;*/
 }
 #leftfoot img
 {
@@ -244,7 +257,8 @@ padding:5px 0px 5px 15px;
 {
 float:left;
 width:552px;
-min-height: 350px;
+min-height: 385px;
+background-image:url(../images/background_all2.jpg);
 margin:0px 0px 0px 20px;
 padding:18px 0px 4px 24px;
 border-style: solid;
@@ -259,12 +273,12 @@ font-size:20px;
 text-align:left;
 color:#2C1B11;
 margin:0px;
-padding:10px 0px 0px 15px;
+padding:10px 0px 3px 15px;
 }
 #dvrightpanel p
 {
 float:left;
-width:530px;
+/*width:530px;*/
 font-size:13px;
 text-align:left;
 voice-family:"\"}\"";
@@ -273,87 +287,6 @@ color:#513D2C;
 margin:0px;
 padding:10px 0px 10px 15px;
 }
-#dvrightpanel .line
-{
-float:left;
-width:533px;
-font-size:0px;
-margin:0px;
-padding:10px 0px 15px 15px;
-}
-#dvrightpanel .learn
-{
-float:left;
-text-align:left;
-font-size:0px;
-margin:0px;
-padding:0px 0px 14px 445px;
-}
-
-#dvrightpanel .learn span
-{
-height:20px;
-width:140px;
-font-size:10px;
-color:#FFFFFF;
-margin:0px 0px 0px 0px;
-padding:0px 0px 0px 0px;
-}
-#dvrightpanel .learn span a
-{
-background-image:url(../images/learn.jpg);
-background-repeat:no-repeat;
-
-width:140px;
-height:30px;
-font-size:10px;
-color:#FFFFFF;
-padding-right:20px;
-text-decoration:none;
-padding-top:8px;
-voice-family:"\"}\"";
-line-height:17px;
-
-}
-#dvrightpanel .learn span a:hover
-{
-background-image:url(../images/learn_over.jpg);
-background-repeat:no-repeat;
-width:130px;
-color:#FFFFFF;
-text-decoration:none;
-}
-
-
-
-#dvrightpanel .learn a 
-{
-background-image:url(../images/learn.jpg);
-background-repeat:no-repeat;
-background-position:center;
-height:20px;
-width:97px;
-font-size:11px;
-color:#FFFFFF;
-padding-bottom:10px;
-padding-left:11px;
-padding-top:3px;
-
-
-}
-
-#dvrightpanel .learn a:hover 
-{
-background-image:url(../images/learn_over.jpg);
-background-repeat:no-repeat;
-height:20px;
-width:97px;
-padding-bottom:10px;
-color:#FFFFFF;
-}
-
-
-
 #dvrightpanel #righttfoot
 {
 float:left;
@@ -604,3 +537,67 @@ border: none;
         font-size: 12px;
         color: red;
       }
+
+       #popup_box {      
+  display:none; /* Hide the DIV */    
+   position:fixed;      
+    _position:absolute; /* hack for internet explorer 6 */       
+    height:300px;       
+    width:600px;       
+    background:#FFFFFF;       
+    left: 300px;     
+    top: 150px;     
+    z-index:100; /* Layering ( on-top of others), if you have lots of layers: I just maximized, you can change it yourself */     
+    margin-left: 15px;            
+    /* additional features, can be omitted */     
+    border:2px solid #ff0000;           
+    padding:15px;       
+    font-size:15px;       
+    -moz-box-shadow: 0 0 5px #ff0000;     
+    -webkit-box-shadow: 0 0 5px #ff0000;     
+    box-shadow: 0 0 5px #ff0000;      
+    }  
+
+    #container {     
+      background: #d2d2d2; /*Sample*/     
+      width:100%;     
+      height:100%; 
+      }  
+
+      a{   cursor: pointer;   text-decoration:none;   }   
+      /* This is for the positioning of the Close Link */ 
+      #popupBoxClose {     
+        font-size:20px;       
+        line-height:15px;       
+        right:5px;       
+        top:5px;       
+        position:absolute;       
+        color:#6fa5e2;       
+        font-weight:500;       
+        } 
+  .table_style1 {
+
+  }
+
+ .for_p {
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #1668BB;
+    border: 1px solid #AACF58;
+    border-radius: 12px;
+    height: 26px;
+    line-height: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px 0 1px 40px;
+    /*width: 20px;*/
+}
+.button {
+  border: 1px solid #AACF58;
+  border-radius: 12px;
+  background-color: #1668BB;
+  text-align: center;
+  color: #FFF;
+  width: 110px;
+  height: 30px;
+}

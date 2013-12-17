@@ -1,0 +1,21 @@
+
+<table class="table_style1">
+	<tr>
+		<th>S.no</th>
+		<th>House Number</th>
+		<th>Floor Number</th>
+		<th>House Type</th>
+	</tr>
+	<%count = 0%>
+	<% @houses.each do |house| %>
+	<%count +=1%>
+	<tr>
+		<td><%= count%></td>
+		<td><%= house.house_number%></td>
+		<td><%= house.floor_number%></td>
+		<td><%= house.house_type%></td>	
+	</tr>
+	<%end%>
+</table>
+
+

@@ -1,6 +1,12 @@
 SampleApp::Application.routes.draw do
   devise_for :users
-  
+
+  resources :houses do
+    collection do
+      get 'enquiry_detail'  
+    end
+  end
+  resources :booking_details
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,79 @@
+<link href="/style.css" rel="stylesheet" type="text/css" />
+<H4>Homes For Rent</H4>
+<p>With Real Estate Home Pages you are given a powerful set of tools that will set yourself apart from the rest of the crowd. The map based property search alone will have your clients and competitors turning their heads at how easy, intuitive, and attractive a search system can be. This user-centric focus carries over to all aspects of a Real Estate Home Pages website, from the website editor to your individual featured listings and beyond. Below are a few of our main features that will put you in control of your business and your client’s future.</p>
+<p>...................................................................................................................................</p>
+
+<div class="main_feature">
+	<img src="images/gallery/one_bhk.jpeg" alt="main flat" width="150" height="100">
+	<div class="feature_title">
+		<h3>ONE BHK</h3>
+	</div>	
+	<ul>
+		<li>One Bed Room</li>
+		<li>Small Living Hall</li>
+		<li>Small Kitchen</li>
+		<li>One Bath Room Available</li>
+	</ul>
+	<div class="for_p"><%= link_to "Enquire Now!!", enquiry_detail_houses_path(:house_type => 'One BHK')%></div>
+</div>
+<div class="main_feature">
+	<img src="images/gallery/two_bhk.jpeg" alt="main flat" width="150" height="100">
+	<div class="feature_title">
+		<h3>TWO BHK</h3>
+	</div>	
+	<ul>
+		<li>Two Bed Room</li>
+		<li>Good Spaced Living Hall</li>
+		<li>Big Kitchen Room</li>
+		<li>Two Bath Room Available</li>
+	</ul>
+	<div class="for_p"><%= link_to "Enquire Now!!", enquiry_detail_houses_path(:house_type => 'Two BHK')%></div>
+</div>
+<div class="main_feature">
+	<img src="images/gallery/three_bhk.jpeg" alt="main flat" width="150" height="100">
+	<div class="feature_title">
+		<h3>THREE BHK</h3>
+	</div>	
+	<ul>
+		<li>Three Bed Room</li>
+		<li>Large Living Hall</li>
+		<li>Big Kitchen Room</li>
+		<li>Three Bath Room Available</li>
+	</ul>
+	<div class="for_p"><%= link_to "Enquire Now!!", enquiry_detail_houses_path(:house_type => 'Three BHK')%></div>
+</div>
+
+<p>...................................................................................................................................</p>	
+<style type="text/css">
+.main_feature {
+    float: left;
+    margin-right: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    width: 172px;
+}
+.main_feature ul {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+    height: 100px;
+}
+
+.feature_title {
+    background-color: #AACF58;
+    border: 1px solid #AACF58;
+    height: 26px;
+    margin-top: 10px;
+}
+.feature_title h3 {
+   font-family: Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    font-stretch: expanded;
+    font-weight: bold;
+    margin-top: 3px;
+    text-transform: uppercase;
+}
+</style>

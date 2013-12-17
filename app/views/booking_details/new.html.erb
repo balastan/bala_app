@@ -1,0 +1,54 @@
+<% #= error_messages_for 'booking_detail'%>
+ <% if @booking.errors.any? %>
+    <div class="font_color">
+        <h2><%= pluralize(@booking.errors.count, "error") %>prohibited this post from being saved</h2>
+        <ul>
+            <% @booking.errors.full_messages.each do |msg| %>
+            <li>
+                <%= msg %>
+            </li>
+            <% end %>
+        </ul>
+    </div>
+    <% end %>
+
+<link href="/style.css" rel="stylesheet" type="text/css" />
+<h2>Please Fill The Followings</h2>
+<table>
+<%= form_for(:booking_detail, :url => booking_details_path,:html => { :method => :post }) do |f| %>
+<tr><td colspan="2">
+	<p><%= f.label "Name"%><br/>
+		<%= f.text_field :name%></p></td></tr>
+<tr><td colspan="2">
+	<p><%= f.label "Father Name"%><br/>
+		<%= f.text_field :father_name%></p></td></tr>
+<tr><td colspan="2">
+	<p><%= f.label "Age"%><br/>
+		<%= f.text_field :age%></p></td></tr>
+<tr><td colspan="2">
+	<p><%= f.label "Address"%><br/>
+		<%= f.text_field :address%></p></td></tr>
+<tr><td colspan="2">
+	<p><%= f.label "City"%><br/>
+		<%= f.text_field :city%></p></td></tr>
+<tr><td colspan="2">
+	<p><%= f.label "State"%><br/>
+		<%= f.text_field :state%></p></td></tr>
+<tr><td colspan="2">
+	<p><%= f.label "Pincode"%><br/>
+		<%= f.text_field :pincode%></p></td></tr>
+<tr><td colspan="2">
+	<p><%= f.label "Mobile Number"%><br/>
+		<%= f.text_field :mobile_number%></p></td></tr>
+<tr><td>
+	<p width=100px><%= f.label "House Type Looking For"%><br/>
+		<%= f.text_field :interested_in,size: 20,:value=>@house_type%></p></td>
+	<td><p><%= f.label	"Floor Looking For"%><br/>
+		<%= f.collection_select :selected_floor, @floor_number, :floor_number, :floor_number ,{:prompt=>'Select'} %></p>
+		</td></tr>
+<tr><td>
+	<p><%= f.submit "Create"%></p></td>
+	<td><p><%= link_to "Back", root_path%></p></td>
+	</tr>
+<%end%>
+</table>
